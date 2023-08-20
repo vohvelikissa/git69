@@ -1,9 +1,11 @@
 #include<stdlib.h>
 #include<string.h>
+#include<stdio.h>
 
 void ft_commit (int dfi, char *committext) {
 	if (dfi == 1) {
 		system("git add .");
+		printf("added dotfiles");
 	}
 	system("git add *");
 	char commit[125] = "git commit -m \"";
