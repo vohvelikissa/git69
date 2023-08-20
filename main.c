@@ -13,6 +13,7 @@ void ft_commit (int dfi, char *committext) {
 	strcat(pcm, committext);
 	strcat(pcm, "\"");
 	system(commit);
+	system("git push");
 }
 int main(int count, char *args[]) {
 	int dotfilesincluded = 0;
