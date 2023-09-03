@@ -16,9 +16,9 @@ void ft_commit (int dfi, char *committext) {
 	system("git push");
 }
 int main(int count, char *args[]) {
-	int dotfilesincluded = 0;
-	if (count > 1 && args[1][0] == 'x') {
-		dotfilesincluded = 1;
+	if (count > 1 && (args[1][0] == '-' && args[1][1] == 'd')) {
+		ft_commit(1,args[2]);
+	} else {
+		ft_commit(0,args[1]);
 	}
-	ft_commit(dotfilesincluded, args[1]);
 }
