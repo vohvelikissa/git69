@@ -16,8 +16,12 @@ void ft_commit (int dfi, char *committext) {
 	system("git push");
 }
 int main(int count, char *args[]) {
-	if (count > 1 && (args[1][0] == '-' && args[1][1] == 'd')) {
-		ft_commit(1,args[2]);
+	if (count > 1 && args[1][0] == '-') {
+		if (args[1][1] == 'd') {
+			ft_commit(1,args[2]);
+		} else if (args[1][1] == 'h') {
+			printf("Git 69 usage:\n-d: include dotfiles\n-h: usage and tips\n");
+		}
 	} else {
 		ft_commit(0,args[1]);
 	}
