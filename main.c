@@ -21,6 +21,8 @@ int main(int count, char *args[]) {
 			ft_commit(1,args[2]);
 		} else if (args[1][1] == 'h') {
 			printf("Git 69 usage:\n-d: include dotfiles\n-h: usage and tips\n");
+		} else {
+			printf("Check -h for usage");
 		}
 	} else {
 		ft_commit(0,args[1]);
