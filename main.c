@@ -20,6 +20,7 @@ void ft_commit (int dfi, char *committext) {
 //TODO: refactor main function to use a single ? to almost eliminate that if shit
 
 int main(int count, char *args[]) {
+	
 	if (count > 1 && args[1][0] == '-') {
 		if (args[1][1] == 'd') {
 			ft_commit(1,args[2]);
@@ -31,4 +32,6 @@ int main(int count, char *args[]) {
 	} else {
 		ft_commit(0,args[1]);
 	}
+
+	//(count > 1 && args[1][0] == '-') ? printf("put the new function here") : ft_commit(0,args[1]); finish this
 }
