@@ -15,6 +15,10 @@ void ft_commit (int dfi, char *committext) {
 	system(commit);
 	system("git push");
 }
+
+//TODO: check for if you are going with the name you want to go with
+//TODO: refactor main function to use a single ? to almost eliminate that if shit
+
 int main(int count, char *args[]) {
 	if (count > 1 && args[1][0] == '-') {
 		if (args[1][1] == 'd') {
